@@ -1,0 +1,20 @@
+@mixin mq($width) {
+    @media only screen and (max-width: $width){
+        @content;
+    }
+    @if $width == 'm'{
+        @media only screen and (max-width: 768px){
+            @content;
+        }
+    }
+    @if $width == 't'{
+        @media only screen and (max-width: 960px){
+            @content;
+        }
+    }
+    @if $width == 'tb'{
+        @media only screen and (max-width: 1020px){
+            @content;
+        }
+    }
+}
